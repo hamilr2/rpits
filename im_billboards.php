@@ -7,12 +7,12 @@ $(function() {
 
 	var eventsTable = new EditableTable({
 		db: 'rpits',
-		dbTable: 'teams',
+		dbTable: 'billboards',
+		columnHeaders: ['id','File Name','Title'],
 		uneditableColumns: ['id'],
-		element: $('#teamsList')
+		element: $('body')
 	});
 	eventsTable.loadTable(0,30);
-
 });
 
 
@@ -21,17 +21,26 @@ $(function() {
 	tr {
 		height:30px;
 	}
-	tr td {
+	tr.erow td, tr.nrow td {
 		width:100px;
+		max-width:150px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow:hidden;
 	}
-	tr.editing input, tr.nrow input {
-		width:100px;
+	td.editing input {
+		width: inherit;
+	}
+	td.action, th.action {
+		width:120px;
 	}
 	th {
 		text-align: left;
 	}
-	tr.erow td.action {
-		width:150px;
+	.l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8 {
+		width:80px !important;
+	}
+	.id, .type, .spacing {
+		width:40px !important;
 	}
 </style>
-<div id="teamsList"></div>

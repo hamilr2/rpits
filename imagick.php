@@ -5,12 +5,12 @@ $canvas->newImage(700,60,"none","png");
 
 //blackBox($canvas,48,130,862,200);
 
-slantRectangle($canvas,10,10,670,40,'#d00000');
+slantRectangle($canvas,array('x'=>10,'y'=>10,'w'=>670,'h'=>40,'color'=>'#d00000'));
 
 $fontN = "fonts/GothamNarrow-Bold.otf";
 $west = imagick::GRAVITY_WEST;
 
-shadowedText($canvas,45,15,600,30,"Your Imagick install is configured correctly!","west","fontN","white");
+shadowedText($canvas,array('x'=>45,'y'=>15,'w'=>600,'h'=>30,'text'=>"Your Imagick install is configured correctly!",'gravity' => "west", 'font' => "fontN", 'color' => "white"));
 
 header("Content-Type: image/png");
 echo $canvas;

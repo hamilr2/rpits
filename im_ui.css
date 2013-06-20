@@ -22,7 +22,7 @@ body > div
 #tabstrip
 {
   background:#AAAAAA;
-	height:75px;
+  height:75px;
   top:150px;
   left:25px;
 }
@@ -119,15 +119,15 @@ body > div
   text-align:center;
   padding:5px;
   z-index: 3;
-  
+
 }
 .tab
 {
-	background-color:white;
+  background-color:white;
   position:relative;
   float:left;
   height:20px;
-	bottom:0px;
+  bottom:0px;
   margin-top:38px;
   margin-right:4px;
   padding:10px;
@@ -138,8 +138,8 @@ body > div
 }
 .active
 {
-    border-bottom:none;
-    padding-bottom:5px;
+  border-bottom:none;
+  padding-bottom:5px;
 }
 #preview img
 {
@@ -191,27 +191,108 @@ edit_target
 {
   display:block;
 }
-#add-title{
+#add-title
+{
   height:50px;
   bottom:0px;
   position:absolute;
   background-color:black;
 }
-#eventSelector {
-	position:absolute;
-	padding:10px;
-	border: solid 3px black;
-	-webkit-box-shadow: 5px 5px 5px #444;
-	-webkit-border-radius: 10px;
+#eventSelector
+{
+  position:absolute;
+  padding:10px;
+  border: solid 3px black;
+  -webkit-box-shadow: 5px 5px 5px #444;
+  -webkit-border-radius: 10px;
 }
 
-#eventSelector ul {
-	list-style: none;
-	margin:0px;
-	padding:0px;
+#eventSelector ul
+{
+  list-style: none;
+  margin:0px;
+  padding:0px;
 }
 
-#eventSelector h2 {
-	text-align:center;
-	margin: 0px;
+#eventSelector h2
+{
+  text-align:center;
+  margin: 0px;
 }
+
+#renderQueue
+{
+  float: left;
+  text-align: center;
+  width: 140px;
+  top: 25px;
+  min-height: 250px;
+  background-color: #AAA ;
+  border: solid 3px black;
+}
+
+.queueItem
+{
+  padding: 3px;
+  float: left;
+  clear: both;
+}
+
+@font-face
+{
+  font-family: IconicFill;
+  src: url('assets/iconic_fill.svg') format("svg"),
+  url('assets/iconic_fill.otf') format("opentype");
+}
+
+#queueMenu
+{
+  min-height: 25px;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
+  background-color: blue;
+}
+.queueMenuButton
+{
+  display: inline-block;
+  position: relative;
+  width: 35px;
+  font-family: IconicFill;
+  font-size: 24pt;
+  padding: 4px;
+  padding-top: 0;
+  padding-bottom: 8px;
+  margin: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: red;
+}
+.queueMenuButton:hover
+{
+  
+}
+/*
+[data-icon]:before
+{
+  font-family: IconicFill;
+  content: attr(data-icon);
+}
+
+#process:before
+{
+  content:'\e047';
+  content: attr(data-icon);
+}
+#prune:before
+{
+  content:'\2796';
+  content: attr(data-icon);
+}
+#destroy:before
+{
+  content:'\2713';
+}*/
